@@ -1,0 +1,46 @@
+/* GOOGLE FONTS IMPORTS */
+@import url('https://fonts.googleapis.com/css?family=Niconne|Teko:300,400&display=swap');
+
+/* CSS CUSTOMER PROPERTIES/VARIABLES */
+:root {
+  --main-white: #fff;
+}
+
+/* GLOBAL STYLES AND RESETS */
+a {
+  /* Override bootstrap styling */
+  color: var(--main-white) !important;
+}
+
+p {
+  margin: 0;
+}
+
+/* HEADER STYLES */
+header {
+  width: 100;
+  height: 100vh;
+  background: linear-gradient(rgba(16, 29, 44, 0.7), rgba(16, 29, 44, 0.7)),
+    url('/images/header-bg.jpg') center no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+header > .container {
+  position: relative;
+  height: 100%;
+  padding: 0;
+}
+
+.navbar-brand {
+  position: absolute;
+  width: 100%;
+  max-width: 100px;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.navbar-brand:hover {
+  opacity: 0.8;
+}
