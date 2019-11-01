@@ -152,6 +152,7 @@ header > .container {
 
 .hero-text h1 {
   font-family: 'Niconne', cursive;
+  font-size: 4rem;
   color: var(--accent-color);
 }
 
@@ -181,6 +182,92 @@ header > .container {
   background-color: var(--accent-color);
 }
 
+/* MENU SECTION */
+.menu {
+  background-color: var(--dark-blue-color);
+}
+
+.shop-info i {
+  color: var(--accent-color);
+  font-size: 50px;
+}
+
+.shop-info h1 {
+  font-family: 'Teko', sans-serif;
+  font-size: 25px;
+  font-weight: 200;
+  opacity: 0.9;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.shop-info p,
+.shop-info address {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+hr {
+  border-top: 1px solid var(--accent-color);
+  opacity: 0.3;
+}
+
+.point-left,
+.point-right {
+  position: relative;
+  background: var(--main-white-color);
+  display: flex;
+}
+
+.point-left::before,
+.point-right::before {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-color: inherit;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  z-index: 1;
+}
+
+.menu-item-desc {
+  padding: 50px 10px;
+  color: var(--dark-blue-color);
+  margin: auto;
+}
+
+.menu-item-desc h6 {
+  color: var(--accent-color);
+  font-size: 20px;
+}
+
+.menu-item-desc h1 {
+  color: var(--dark-blue-color);
+  font-size: 30px;
+  letter-spacing: 1px;
+  font-family: 'Teko', sans-serif;
+  font-weight: 300;
+}
+
+/* CHEF SECTION */
+.card-body h1 {
+  font-size: 25px;
+  letter-spacing: 1px;
+  font-family: 'Teko', sans-serif;
+  font-weight: 300;
+}
+
+.card-body h6 {
+  font-size: 16px;
+  color: var(--accent-color);
+}
+
+footer {
+  background-color: var(--dark-blue-color);
+  color: rgba(255, 255, 255, 0.5);
+}
+
 /* MEDIA QUERIES */
 /* Break point Bootstrap uses for mobile phones in landscape mode */
 @media (min-width: 576px) {
@@ -191,6 +278,15 @@ header > .container {
   .hamburger-menu {
     top: 35px;
     right: 25px;
+  }
+
+  .point-left::before,
+  .point-right::before {
+    display: none;
+  }
+
+  .menu-item-desc {
+    padding: 50px 20px;
   }
 }
 
@@ -257,5 +353,32 @@ header > .container {
 
   .nav-link:hover::before {
     transform: scaleX(1);
+  }
+}
+
+/* Extra large devices */
+@media (min-width: 1200px) {
+  .point-left::before,
+  .point-right::before {
+    display: block;
+    top: 50%;
+    left: initial;
+    transform: translate(0, -50%) rotate(45deg);
+  }
+
+  .point-left::before {
+    left: -12px;
+  }
+  .point-right::before {
+    right: -12px;
+  }
+
+  .menu-item-desc p {
+    display: none;
+  }
+
+  .menu-item-desc .btn {
+    color: var(--main-white-color) !important;
+    background-color: var(--accent-color);
   }
 }
